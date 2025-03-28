@@ -1,0 +1,11 @@
+services:
+  client:
+    container_name: client
+    build: ./
+    ports:
+      - 5173:5173
+    volumes:
+      - ./vite.config.ts:/app/vite.config.ts
+      - ./index.html:/app/index.html
+      - ./src:/app/src/
+      - ./public/:/app/public/
